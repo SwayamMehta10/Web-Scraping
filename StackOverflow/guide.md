@@ -34,3 +34,16 @@ Iterate through the 'questions' and assign the 'title' and 'url' values from the
 ```
 $ scrapy crawl stack -o items.json -t json
 ```
+
+# Storing Data in MongoDB
+Connect to localhost:27017 using MongoDB Compass and create a new databse "stackoverflow" with a collection "questions". Edit the settings.py file accordingly.
+
+## Pipeline Management
+Connect the spider and the database through a pipeline. Edit the pipelines.py file to establish a connection the database, unpack the data and save it to the databse.
+
+# Test
+Run the following command within the "stack" directory:
+```
+$ scrapy crawl stack
+```
+Open the collection in MongoDB Compass, you will be able to see the crawled data and you can export the data as per your requirements.
